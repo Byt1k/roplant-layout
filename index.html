@@ -1,504 +1,259 @@
-<!doctype html>
-<html lang="ru">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ландшафтное проектирование </title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- -->
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+<html>
+<head>
+  <style>
+    /* Стили для навигационной панели */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
 
-  <link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 10px;
+    }
+
+    .nav a:hover {
+      color: #555;
+    }
+
+    /* Стили для заголовка и подзаголовка */
+    .header {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .header h2 {
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      color: #555;
+    }
+
+    /* Стили для изображений и видео */
+    .media {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .media img, .media video {
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+
+    /* Стили для отзывов клиентов */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .testimonials .card {
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px #999;
+      padding: 10px;
+    }
+
+    .testimonials .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+
+    .testimonials .card p {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: justify;
+    }
+
+    .testimonials .card span {
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      color: #555;
+      text-align: right;
+      display: block;
+    }
+
+    /* Стили для формы обратной связи и кнопки действия */
+    .form {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .form input, .form button {
+      width: 300px;
+      height: 40px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .form button {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .form button:hover {
+      background-color: #555;
+      color: #fff;
+    }
+
+    /* Стили для счетчика обратного отсчета */
+    .countdown {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .countdown h3 {
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .countdown span {
+      font-size: 36px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 10px;
+    }
+  </style>
 </head>
-<body id="main-page">
-<section class="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Ландшафтное проектирование</h1>
-        <img src="img/bg1.png" alt="bg" class="bg-dn">
-        <img src="img/bg-mobile.png" alt="bg" class="bg-db w-100">
-      </div>
-    </div>
+<body>
+  <!-- Навигационная панель -->
+  <div class="nav">
+    <a href="#">Главная</a>
+    <a href="#">О нас</a>
+    <a href="#">Услуги</a>
+    <a href="#">Контакты</a>
   </div>
-</section>
-<section class="stages">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2>Этапы работ:</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3">
-        <p class="stages__text">*На данном этапе требуется топографическая съемка участка <br>
-        Если такой нет, мы можем сделать своим штатным геодезистом. Услуга платная.</p>
-      </div>
-      <div class="col-lg-9">
-        <div class="owl-carousel owl-theme owl-stages">
-          <div class="item stage__item">
-            <img src="img/s1.png" alt="img" class="w-100">
-            <div class="d-flex align-items-center">
-              <div class="stage__numb">1</div>
-              <p class="stage__name">Подготовительный</p>
-            </div>
-          </div>
-          <div class="item stage__item">
-            <img src="img/s2.png" alt="img" class="w-100">
-            <div class="d-flex align-items-center">
-              <div class="stage__numb">2</div>
-              <p class="stage__name">Эскизный проект*</p>
-            </div>
-          </div>
-          <div class="item stage__item">
-            <img src="img/s3.png" alt="img" class="w-100">
-            <div class="d-flex align-items-center">
-              <div class="stage__numb">3</div>
-              <p class="stage__name">Рабочий проект*</p>
-            </div>
-          </div>
-          <div class="item stage__item">
-            <img src="img/s4.png" alt="img" class="w-100">
-            <div class="d-flex">
-              <div class="stage__numb">4</div>
-              <p class="stage__name">Заключение договора и выполнение работ на участке</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 col-sm-8 m-auto">
-        <div class="stage__line"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="desc-stage">
-  <div class="container dn-md">
-    <div class="row">
-      <div class="col-lg-3 d-flex d-flex flex-column justify-content-center">
-        <div id="desc-stage__tabs">
-          <div class="desc-stage__tab active" data-btn="1">Подготовительный этап</div>
-          <div class="desc-stage__tab" data-btn="2">Эскизный проект</div>
-          <div class="desc-stage__tab" data-btn="3">Рабочий проект</div>
-        </div>
-      </div>
-      <div class="col-lg-8 offset-lg-1">
-        <h2>Что входит в этап</h2>
-        <div id="desc-stage__contents">
-          <div class="desc-stage__content active" data-content="1">
-            <div class="mr-5">
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3"> Выезд на участок</p>
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Знакомство с заказчиком</p>
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Первичная консультация</p>
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Визуальный осмотр участка</p>
-              <p class="d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Определение почвенных условий, режима освещения, климатических особенностей</p>
-            </div>
-            <div>
-              <p class="d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Осмотр существующих строений, коммуникаций, зеленых насаждение       и пр.</p>
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Пожелания заказчика</p>
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Составление технического задания</p>
-              <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Выбор варианта проектирования</p>
-              <p class="d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Составление коммерческого предложения на проектирование</p>
-            </div>
-          </div>
-          <div class="desc-stage__content" data-content="2">
-            Таб 2
-          </div>
-          <div class="desc-stage__content" data-content="3">
-            Таб 3
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="db-md">
-    <h2>Что входит в этап</h2>
-    <div id="accordion">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <button class="btn btn-link d-flex justify-content-between" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Подготовительный этап
-            <div>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-        </div>
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-          <div class="card-body">
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3"> Выезд на участок</p>
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Знакомство с заказчиком</p>
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Первичная консультация</p>
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Визуальный осмотр участка</p>
-            <p class="d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Определение почвенных условий, режима освещения, климатических особенностей</p>
-            <p class="d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Осмотр существующих строений, коммуникаций, зеленых насаждение       и пр.</p>
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Пожелания заказчика</p>
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Составление технического задания</p>
-            <p class="d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Выбор варианта проектирования</p>
-            <p class="d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Составление коммерческого предложения на проектирование</p>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <button class="btn btn-link collapsed d-flex justify-content-between" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Эскизный проект
-            <div>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-          <div class="card-body">
-            Таб 2
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <button class="btn btn-link collapsed d-flex justify-content-between" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Рабочий проект
-            <div>
-              <span></span>
-              <span></span>
-            </div>  
-          </button>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body">
-            Таб 3
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="offer">
-  <h2>Что мы предлагаем</h2>
-  <div class="offer__container d-flex" style="height: 600px;">
-    <div class="offer__block">
-      <img src="img/1.svg" alt="icon" class="offer__block_icon">
-      <h3>Ситуационный план*</h3>
-      <p>Изображает участок с прилегающими территориями <br>
-      Изображает на плане расположение имеющихся строений, зеленых насаждений и пр.
-      </p>
-      <p class="offer__block_desc">*Необходима топографическая съемка участка. <br>
-      Если такой нет, мы можем сделать своим штатным геодезистом. Услуга платная.</p>
-    </div>
-    <div class="offer__img" style="background: url(img/bg2.png) no-repeat center center / cover;"></div>
-  </div>
-  <div class="offer__container d-flex align-items-start" style="height: 770px;">
-    <div class="offer__block">
-      <img src="img/2.svg" alt="icon" class="offer__block_icon">
-      <h3>Генеральный план</h3>
-      <p class="mb-3">Основной чертеж, который содержит:</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схематичное изображение участка с соблюдением заданного масштаба, точной площади территории;</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схемы расположения существующих, планируемых коммуникаций;</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Чертежи существующих зданий, сооружений и планируемых строений;</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Информацию о планируемом благоустройстве (расположение дорожек, площадок, малых архитектурных форм (МАФ),лестниц, водоемов и других элементов.)</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Данные по озеленению (расположение существующих растений, планируемые элементы озеленения(газоны, цветники)).</p>
-      <button>Посмотреть пример плана</button>
-    </div>
-    <div class="offer__block" style="border-right: 1px solid #DFDFDF; border-left: 1px solid #DFDFDF;">
-      <img src="img/3.svg" alt="icon" class="offer__block_icon">
-      <h3>Дендроплан с ассортиментной ведомостью </h3>
-      <p class="mb-3">Разрабатывается для участка в целом <br>Включает в себя:</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Крупные деревья и кустарники</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Газон и цветники</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Арки и перголы, увитые лианами.</p>
-    </div>
-    <div class="offer__block">
-      <img src="img/4.svg" alt="icon" class="offer__block_icon">
-      <h3>Детальная <br>проработка цветников</h3>
-      <button data-toggle="modal" data-target="#exampleModalLong">Посмотреть пример плана</button>
-    </div>
-  </div>
-  <div class="offer__container d-flex" style="height: 600px;">
-    <div class="offer__img" style="background: url(img/bg3.png) no-repeat center center / cover;"></div>
-    <div class="offer__block">
-      <img src="img/5.svg" alt="icon" class="offer__block_icon">
-      <h3>Эскизы видовых <br>точек 3д</h3>
-     <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Эскизный проект – 10 - 15 эскизов думаю что меньше штук должно быть</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Рабочий проект – от 15 эскизов</p>
-    </div>
-  </div>
-  <div class="offer__container d-flex" style="height: 600px;">
-    <div class="offer__block">
-      <img src="img/6.svg" alt="icon" class="offer__block_icon">
-      <h3>Концепция мощения</h3>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема расположения дорожно-тропиночной сети</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Конструктивные разрезы пирога мощений (парковка, дорожки, тропинки)</p>
-     <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Ведомость используемых материалов</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема раскладки мощения*</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Смета на выполнение работ</p>
-      <p class="offer__block_desc mt-5">*Дополнительно оплачивается</p>
-    </div>
-    <div class="offer__block" style="border-right: 1px solid #DFDFDF; border-left: 1px solid #DFDFDF;">
-      <img src="img/7.svg" alt="icon" class="offer__block_icon">
-      <h3>План освещения </h3>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема расположения фонарей и светильников</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Конструктивные разрезы закладных элементов</p>
-     <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема расположения кабелей </p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Разрезы залегания кабелей </p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Ведомость используемых материалов</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Смета на выполнение работ</p>
-    </div>
-    <div class="offer__block">
-      <img src="img/8.svg" alt="icon" class="offer__block_icon">
-      <h3>План дренажной системы</h3>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема расположения дренажной системы</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Конструктивные разрезы залегания дренажных труб</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Конструктивные разрезы врезок и дренажных колодцев</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема системы выброса воды из дренажного колодца </p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Ведомость используемых материалов</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Смета на выполнение работ</p>      
-    </div>
-  </div>
-  <div class="offer__container d-flex" style="height: 600px;">
-    <div class="offer__block">
-      <img src="img/9.svg" alt="icon" class="offer__block_icon">
-      <h3>Описание растений</h3>
-     <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Описание каждого вида растений подобранных на участке (с фото, и важными особенностями)</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Агротехнические схемы ухода за растениями на участке</p>
-    </div>
-    <div class="offer__img" style="background: url(img/bg4.png) no-repeat center center / cover;"></div>
-  </div>
-  <div class="offer__container d-flex" style="height: 600px;">
-    <div class="offer__block">
-      <img src="img/10.svg" alt="icon" class="offer__block_icon">
-      <h3>План ливневой <br>канализации</h3>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема расположения системы ливневой канализации</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Конструктивные разрезы залегания ливневых труб и дождеприемников, врезок</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Ведомость используемых материалов</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Смета на выполнение работ</p>
-    </div>
-    <div class="offer__block" style="border-right: 1px solid #DFDFDF; border-left: 1px solid #DFDFDF;">
-      <img src="img/11.svg" alt="icon" class="offer__block_icon">
-      <h3>План автоматического <br>полива*</h3>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Схема расположения системы полива по участку</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Конструктивные разрезы залегания труб, емкости для полива</p>
-     <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Ведомость используемых материалов</p>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Смета на выполнение работ</p>
-      <p class="offer__block_desc mt-5">*Чертеж не входит в проект, за доп. плату</p>
-    </div>
-    <div class="offer__block">
-      <img src="img/12.svg" alt="icon" class="offer__block_icon">
-      <h3>Детализированная смета</h3>
-      <p class="offer__block_list-item d-flex align-items-center"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Смета с подробным расчётом  реализации данного проекта, включая в себя стоимость материалов и работ.</p>
-      <p class="offer__block_list-item d-flex align-items-start"><img src="img/tick.svg" alt="icon" class="d-block mr-3">Стоимость материалов и работ действует в течение 14 дней с момента составления сметы. По прошествии 14 дней стоимость материалов и работ могут быть пересмотрены</p>    
-    </div>
-  </div>
-  <img src="img/bg5.png" alt="img" class="w-100">
-</section>
-<section class="price">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2>Стоимость проектирования</h2>
-      </div>
-      <div class="col-xl-4 col-lg-6">
-        <div class="price__block-head" style="border: 1px solid #DFDFDF">
-          <h3>Эскизный проект </h3>
-          <p class="price__sum">от <span>4 990 </span>руб/сотка*</p>
-        </div>
-        <div class="price__block-body" style="border: 1px solid #DFDFDF">
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Техническое задание</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Эскиз генерального плана – 2 варианта (с кратким описанием концепции) </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Подбор покрытий </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Ассортимент растений</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Подбор малых архитектурных форм (МАФ) и садовой мебели</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Генеральный план </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Визуализации 3D или скетч (для понимания концепции, основные видовые точки генплана)</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Концепция освещения (план)</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Подбор осветительного оборудования</p>
-          <div class="price__block_cta">
-            <button>Оставить заявку</button>
-            <p class="price__block_desc">*минимальная сумма от 24 990 руб</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-6">
-        <div class="price__block-head" style="background: #F3F5F8;border-bottom: 1px solid #DFDFDF">
-          <h3>Рабочий проект </h3>
-          <p class="price__sum">от <span>9 990 </span>руб/сотка*</p>
-        </div>
-        <div class="price__block-body" style="background: #F3F5F8;">
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Техническое задание</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Пояснительная записка </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Генеральный план  </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Разбивочный чертёж (размерный план с размещением дорожно-тропиночной сети)  </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Проект вертикальной планировки земельного участка с перемещением грунтовых масс (при необходимости) </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">План мощения + план раскладки мощения (при необходимости)</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Конструкции дорожных одежд (КДО)  </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">План проектируемых насаждений</p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Посадочный чертёж (размерный план расположения посадочных ям древесно-кустарниковой растительности и цветников) </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Планы разбивки цветников   </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Схема размещения осветительного оборудования с ведомостью светильников  </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Схема системы полива с ведомостью </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Общая ведомость объёмов  </p>
-          <p class="d-flex"><img src="img/tick-small.svg" alt="icon" class="mr-2">Детализированная смета</p>
-          <div class="price__block_cta">
-            <button>Оставить заявку</button>
-            <p class="price__block_desc">*минимальная сумма от 49 990 руб</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4">
-        <div class="price__block-head">
-          <h3 class="mb-1">Доп. услуги</h3>
-          <p class="mt-4 mb-2">Отдельные чертежи разрезов мощений и коммуникаций –</p>
-          <p class="price__sum mb-4">от <span>9 990 </span>руб/чертеж</p>
-          <div style="width: 100%; height: 1px; background: #DFDFDF;"></div>
-          <p class="mt-4 mb-2">Отдельные визуализации цветников (2-3 варианта)–  </p>
-          <p class="price__sum mb-4">от <span>2 990 </span>руб/визуализации</p>
-          <div style="width: 100%; height: 1px; background: #DFDFDF;"></div>
-          <p class="mt-4 mb-2">Отдельная визуализация древесно-кустарниковой композиции  </p>
-          <p class="price__sum mb-4">от <span>4 990 </span>руб/визуализации</p>
-          <div style="width: 100%; height: 1px; background: #DFDFDF;"></div>
-          <p class="mt-4 mb-2">Выезд на участок – </p>
-          <p class="price__sum mb-4">от <span>3 500 </span>руб*</p>
-          <p class="price__block_desc">*Бесплатно, при разработке дизайн-проекта</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2>Наши работы</h2>
-      </div>
-    </div>
-  </div>
-  <div class="owl-carousel owl-theme owl-portfolio">
-    <div class="item portfolio__item">
-      <div class="portfolio__item_img" style="background: url(img/img1.png) no-repeat center center / cover;"></div>
-      <p class="portfolio__item_title">Название проекта или участка</p>
-      <p class="portfolio__item_text">Краткое описание особенностей работы, поставленных задач, сроков и тд. <br>Краткая информация об этих объектах</p>
-    </div>
-    <div class="item portfolio__item">
-      <div class="portfolio__item_img" style="background: url(img/bg2.png) no-repeat center center / cover;"></div>
-      <p class="portfolio__item_title">Название проекта или участка</p>
-      <p class="portfolio__item_text">Краткое описание особенностей работы, поставленных задач, сроков и тд. <br>Краткая информация об этих объектах</p>
-    </div>
-    <div class="item portfolio__item">
-      <div class="portfolio__item_img" style="background: url(img/bg3.png) no-repeat center center / cover;"></div>
-      <p class="portfolio__item_title">Название проекта или участка</p>
-      <p class="portfolio__item_text">Краткое описание особенностей работы, поставленных задач, сроков и тд. <br>Краткая информация об этих объектах</p>
-    </div>
-  </div>
-</section>
-<section class="articles">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2>Статьи</h2>
-      </div>
-      <div class="owl-carousel owl-theme owl-articles dn">
-        <div class="item item__articles d-flex">
-          <div class="item__articles_img" style="background: url(img/man.png) no-repeat center center / cover;"></div>
-          <div>
-            <p class="item__articles_title">Заголовок статьи про ландшафтное проектирование будет тут</p>
-            <a href="#" class="item__articles_link d-flex align-items-center">Читать далее <img src="img/link.svg" alt="icon" class="ml-3"></a>
-          </div>
-        </div>
-        <div class="item item__articles d-flex">
-          <div class="item__articles_img" style="background: url(img/s1.png) no-repeat center center / cover;"></div>
-          <div>
-            <p class="item__articles_title">Заголовок статьи про ландшафтное проектирование будет тут</p>
-            <a href="#" class="item__articles_link d-flex align-items-center">Читать далее <img src="img/link.svg" alt="icon" class="ml-3"></a>
-          </div>
-        </div>
-        <div class="item item__articles d-flex">
-          <div class="item__articles_img" style="background: url(img/man.png) no-repeat center center / cover;"></div>
-          <div>
-            <p class="item__articles_title">Заголовок статьи про ландшафтное проектирование будет тут</p>
-            <a href="#" class="item__articles_link d-flex align-items-center">Читать далее <img src="img/link.svg" alt="icon" class="ml-3"></a>
-          </div>
-        </div>
-      </div>
-      <div class="db">
-        <div class="item item__articles d-flex">
-          <div class="item__articles_img" style="background: url(img/man.png) no-repeat center center / cover;"></div>
-          <div>
-            <p class="item__articles_title">Заголовок статьи про ландшафтное проектирование будет тут</p>
-            <a href="#" class="item__articles_link d-flex align-items-center">Читать далее <img src="img/link.svg" alt="icon" class="ml-3"></a>
-          </div>
-        </div>
-        <div class="item item__articles d-flex">
-          <div class="item__articles_img" style="background: url(img/s1.png) no-repeat center center / cover;"></div>
-          <div>
-            <p class="item__articles_title">Заголовок статьи про ландшафтное проектирование будет тут</p>
-            <a href="#" class="item__articles_link d-flex align-items-center">Читать далее <img src="img/link.svg" alt="icon" class="ml-3"></a>
-          </div>
-        </div>
-        <div class="item item__articles d-flex">
-          <div class="item__articles_img" style="background: url(img/man.png) no-repeat center center / cover;"></div>
-          <div>
-            <p class="item__articles_title">Заголовок статьи про ландшафтное проектирование будет тут</p>
-            <a href="#" class="item__articles_link d-flex align-items-center">Читать далее <img src="img/link.svg" alt="icon" class="ml-3"></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 m-auto">
-        <div class="stage__line"></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Modal -->
+  <!-- Заголовок и подзаголовок -->
+  <div class="header">
+    <h1>Организуйте свою идеальную свадьбу с Wedding Planner</h1>
+    <h2>Мы - профессиональная команда свадебных планировщиков, которая поможет вам сделать ваш день незабываемым</h2>
+  </div>
 
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 m-auto">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal"><img src="img/close.svg" alt="close"></button>
-            <h2>Пример плана цветников</h2>
-            <img src="img/ex.png" alt="example" class="w-100">
-          </div>
-        </div>
-      </div>
+  <!-- Изображения и видео -->
+  <div class="media">
+    <img src="wedding1.jpg" alt="Свадьба 1">
+    <img src="wedding2.jpg" alt="Свадьба 2">
+    <img src="wedding3.jpg" alt="Свадьба 3">
+    <video src="wedding4.mp4" controls></video>
+  </div>
+
+  <!-- Отзывы клиентов -->
+  <div class="testimonials">
+    <div class="card">
+      <img src="client1.jpg" alt="Клиент 1">
+      <p>Мы очень довольны работой Wedding Planner. Они организовали нашу свадьбу так, как мы хотели, и учли все наши пожелания. Спасибо за вашу профессиональность и внимание к деталям.</p>
+      <span>Анна и Иван</span>
+    </div>
+    <div class="card">
+      <img src="client2.jpg" alt="Клиент 2">
+      <p>Wedding Planner - это лучший выбор для тех, кто хочет иметь неповторимую свадьбу. Они сделали все, чтобы наш день был особенным и запоминающимся. Мы рекомендуем их всем нашим друзьям и знакомым.</p>
+      <span>Мария и Петр</span>
+    </div>
+    <div class="card">
+      <img src="client3.jpg" alt="Клиент 3">
+	    <p>Мы благодарны Wedding Planner за то, что они помогли нам реализовать нашу мечту. Они подобрали для нас лучшие места, декорации, фотографов и музыкантов. Они были очень дружелюбны и отзывчивы на все наши вопросы и пожелания.</p>
+      <span>Елена и Алексей</span>
     </div>
   </div>
-</div>
 
+  <!-- Форма обратной связи и кнопка действия -->
+  <div class="form">
+    <h3>Заполните форму, чтобы получить бесплатную консультацию</h3>
+    <input type="text" placeholder="Ваше имя">
+    <input type="email" placeholder="Ваш email">
+    <input type="tel" placeholder="Ваш телефон">
+    <button>Отправить</button>
+  </div>
 
+  <!-- Счетчик обратного отсчета -->
+  <div class="countdown">
+    <h3>До нашей следующей свадьбы осталось:</h3>
+    <span id="days">0</span> дней
+    <span id="hours">0</span> часов
+    <span id="minutes">0</span> минут
+    <span id="seconds">0</span> секунд
+  </div>
 
+  <!-- Скрипт для счетчика обратного отсчета -->
+  <script>
+    // Установить дату и время свадьбы
+    var weddingDate = new Date("2024-02-14T12:00:00");
+	  // Обновлять счетчик каждую секунду
+    var countdown = setInterval(function() {
+      // Получить текущую дату и время
+      var now = new Date().getTime();
+      // Вычислить разницу между свадьбой и текущим временем
+      var difference = weddingDate - now;
+      // Вычислить дни, часы, минуты и секунды
+      var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      // Отобразить результат на странице
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+      // Если свадьба уже прошла, остановить счетчик и показать сообщение
+      if (difference < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "Свадьба состоялась!";
+      }
+    }, 1000);
 
-
-
-<script src="bootstrap/jquery-3.5.1.slim.min.js"></script>
-<script src="bootstrap/popper.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
-
-
-
-
-
-
-<!--   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-   -->
-  <script src="owlcarousel/owl.carousel.min.js"></script>
-  <script src="js/main.js"></script>
+    // Функция для валидации формы обратной связи
+    function validateForm() {
+      // Получить значения полей формы
+      var name = document.querySelector("input[type=text]").value;
+      var email = document.querySelector("input[type=email]").value;
+      var phone = document.querySelector("input[type=tel]").value;
+      // Проверить, что все поля заполнены
+      if (name == "" || email == "" || phone == "") {
+        alert("Пожалуйста, заполните все поля формы");
+        return false;
+      }
+      // Проверить, что email имеет правильный формат
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!emailPattern.test(email)) {
+        alert("Пожалуйста, введите корректный email");
+        return false;
+      }
+      // Проверить, что телефон имеет правильный формат
+      var phonePattern = /^\+?\d{10,12}$/;
+      if (!phonePattern.test(phone)) {
+        alert("Пожалуйста, введите корректный телефон");
+        return false;
+      }
+      // Если все проверки пройдены, отправить форму и показать сообщение
+      alert("Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время");
+      return true;
+    }
+  </script>
 </body>
 </html>
 
